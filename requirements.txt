@@ -3,6 +3,8 @@ astor==0.8.0
 attrs==19.3.0
 backcall==0.1.0
 bleach==3.1.0
+boto3==1.17.23
+botocore==1.20.23
 certifi==2019.9.11
 chardet==3.0.4
 Click==7.0
@@ -28,6 +30,7 @@ ipywidgets==7.5.1
 itsdangerous==1.1.0
 jedi==0.15.1
 Jinja2==2.10.3
+jmespath==0.10.0
 jsonschema==3.1.1
 jupyter==1.0.0
 jupyter-client==5.3.4
@@ -46,15 +49,18 @@ nbconvert==5.6.0
 nbformat==4.4.0
 notebook==6.0.1
 numpy==1.17.3
-object_detection-0.0.3.tar
+object-detection==0.0.3
 opencv-contrib-python==4.1.1.26
 pandocfilters==1.4.2
 parso==0.5.1
+pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==6.2.0
+pkg-resources==0.0.0
 prometheus-client==0.7.1
 prompt-toolkit==2.0.10
 protobuf==3.10.0
+ptyprocess==0.7.0
 Pygments==2.4.2
 pyparsing==2.4.2
 pyrsistent==0.15.4
@@ -62,6 +68,7 @@ python-dateutil==2.8.0
 pyzmq==18.1.0
 qtconsole==4.5.5
 requests==2.22.0
+s3transfer==0.3.4
 Send2Trash==1.5.0
 six==1.12.0
 tensorboard==1.14.0
