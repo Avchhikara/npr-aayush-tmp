@@ -49,6 +49,7 @@ def detect_license_plate(encodedImage, imagePath):
     # print(response)
     blocks = response['Blocks']
     result = ""
+    # print(blocks)
     for block in blocks:
       # print(block)
       if block['BlockType'] == "LINE":
@@ -56,13 +57,17 @@ def detect_license_plate(encodedImage, imagePath):
 
     # print(block)
     # print(block[])
-    print(result)
-    # if(len(result) > 0):
-    #   res=re.findall("\s*[AP,AR,AS,BR,CG,GA,GJ,HR,HP,JK,JH,KA,KL,MP,MH,MN,ML,MZ,NL,OD,PB,RJ,SK,TN,TS,TR,UA,UK,UP,WB,AN,CH,DN,DD,DL,LD,PY]{2}\s*[0-9]{1,2}\s*[A-Z]{1,2}\s*[0-9]{1,4}\s*]?",result)    
-    #   for word in mystates:
-    #       if(word in result):
-    #           res = re.findall(word + "[0-9]{1,2}\s*[A-Z]{1,2}\s*[0-9]{1,4}\s*]?", result)
-    #           if(len(res) >0):
-    #               return(res[0])
+    # print(result)
+    if(len(result) > 0):
+      res=re.findall("\s*[AP,AR,AS,BR,CG,GA,GJ,HR,HP,JK,JH,KA,KL,MP,MH,MN,ML,MZ,NL,OD,PB,RJ,SK,TN,TS,TR,UA,UK,UP,WB,AN,CH,DN,DD,DL,LD,PY]{2}\s*[0-9]{1,2}\s*[A-Z]{1,2}\s*[0-9]{1,4}\s*]?",result)    
+      print(res)
+      for word in mystates:
+          if(word in result):
+              res = re.findall(word + "[0-9]{1,2}\s*[A-Z]{1,2}\s*[0-9]{1,4}\s*]?", result)
+              if(len(res) >0):
+                  # print(res[0])
+                  return "".join(re.findall("[A-Za-z0-9]*", res[0]))
+    # if len(result) and result[0:3] == "IND": result = result[3:]
+
     return "".join(re.findall("[A-Za-z0-9]*", result))
     
